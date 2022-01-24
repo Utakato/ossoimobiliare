@@ -1,0 +1,237 @@
+<%- include ("./partials/header") %>
+<div class="breadcrumb-area jarallax" style="background-image:url(/assets/img/bg/test.jpg);">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="breadcrumb-inner">
+                    <h1 class="page-title">Rezultatele căutării</h1>
+                    <ul class="page-list">
+                        <li><a href="index.html">Acasă</a></li>
+                        <li>Rezultatele căutării</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- breadcrumb area End -->
+
+<!-- search page start -->
+<div class="search-page-wrap pd-top-100 pd-bottom-70">
+    <div class="search-container">
+        <div class="container">
+            <div class="row justify-content-center">
+                <!-- Filter area start -->
+                <div class="col-xl-3 col-lg-4 sitebar">
+                    <div class="text-center">
+                    <button class="btn btn-orange area-btn" type="button" data-toggle="collapse" data-target="#collapseFilters" aria-expanded="false" aria-controls="collapseFilters">
+                        Filtre
+                      </button>
+                    <a id="filters"></a>
+                    </div>
+                    <form class="widget widget-sidebar-search-wrap collapse" action="/search_list" method="POST" name="filterForm" id="collapseFilters">
+                        <div class="widget-sidebar-search"  >
+                             
+                            <!-- Choose area start -->
+                                
+                                <div class="rld-single-select text-center">
+                                        <a class="btn btn-orange area-btn" data-toggle="collapse" href="#fullAreas" role="button" aria-expanded="false" aria-controls="fullAreas">
+                                          Alege Zone
+                                        </a>                                        
+                                </div>
+                                <div class="collapse" id="fullAreas" >
+                                    <a class="btn btn-yellow fixed-bottom-button" data-toggle="collapse" href="#fullAreas" role="button" aria-expanded="false" aria-controls="fullAreas"  onclick="location.href='#filters'">
+                                        Închide
+                                      </a>
+                                    <div class="card card-body">        
+                                                <% for (let count = 0 ; count < areaList.length; count++){ %>
+                                                     <label for=<%= areaList[count]%> class="checkbox" style="display: block;">
+                                                        <input type="checkbox" class="area" id="zona_<%= areaList[count].replace(" ", "_")%>" name="area-cbx"  value="<%= areaList[count]%>" >
+                                                        <%= areaList[count] %>
+                                                        </label>
+                                                <% } %> 
+                                    <div class="fixed-bottom-mobile">
+                                    <a class="btn btn-yellow fixed-bottom-button" data-toggle="collapse" href="#fullAreas" role="button" aria-expanded="false" aria-controls="fullAreas"  onclick="location.href='#filters'">
+                                        Închide
+                                      </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Choose area end -->
+
+                            <!-- Choose filters area start -->
+                            <div class="widget-sidebar-item-wrap rld-single-select">
+                                <div class="title d-block mb-0 pt-2 text-center filter-title">Tip Tranzacție</div>
+                                <select class="select single-select" name="transactionType" id="transactionType">
+                                    <option id="transactionTypeundefined" value="" selected disabled hidden>Tip Tranzacție</option>  
+                                    <option id="transactionType1" value="1">Vânzare</option>
+                                    <option id="transactionType2" value="2">Închiriere</option>
+                                </select>
+                            </div>
+                            <div class="widget-sidebar-item-wrap rld-single-select">
+                                <div class="title d-block mb-0 pt-2 text-center filter-title">Tip Imobil</div>
+                                <select class="select single-select" name="propType" id="propType">
+                                    <option id="propType1" value="1, 3, 4, 5, 6, 7">Tip Imobil</option>
+                                    <option id="propType2" value="1">Apartament</option>
+                                    <option id="propType3" value="3">Casă</option>
+                                    <option id="propType4" value="4, 5, 7">Spațiu Comercial</option>
+                                    <option id="propType5" value="6">Teren</option>
+                                </select>
+                            </div>
+                            <div class="widget-sidebar-item-wrap rld-single-select-wrap">
+                                <div class="title d-block mb-0 pt-2 text-center filter-title">Camere</div>
+                                <div class="rld-single-select d-inline-block float-left">
+                                    <select class="select single-select" name="minRooms" id="minRooms">
+                                      <option id="minRoomsundefined" value="" selected="selected">Min.</option>
+                                      <option id="minRooms1" value="1">1</option>
+                                      <option id="minRooms2" value="2">2</option>
+                                      <option id="minRooms3" value="3">3</option>
+                                      <option id="minRooms4" value="4">4</option>
+                                    </select>
+                                </div>
+                                <div class="rld-single-select d-inline-block float-right">
+                                    <select class="select single-select" name="maxRooms" id="maxRooms">
+                                      <option id="maxRooms1" value="1">1</option>
+                                      <option id="maxRooms2" value="2">2</option>
+                                      <option id="maxRooms3" value="3">3</option>
+                                      <option id="maxRooms4" value="4">4</option>
+                                      <option id="maxRoomsundefined" value="" selected="selected">Max.</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- To change input to text with suggestions -->
+                            <div class="widget-sidebar-item-wrap rld-single-select-wrap">
+                                <div class="title d-block mb-0 pt-2 text-center filter-title">Preț</div>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <input class="form-control onlyNumbers" type="text" class="textfield" value="" id="minPrice" name="minPrice" placeholder="Min" autocomplete="off" onkeypress="return isNumber(event)" onpaste="return false;"/>
+                                        </div>
+                                        <div class="col-6">
+                                            <input class="form-control onlyNumbers" type="text" class="textfield" value="" id="maxPrice" name="maxPrice" placeholder="Max" autocomplete="off" onkeypress="return isNumber(event)" onpaste="return false;"/>
+                                        </div>
+                                    </div>
+                            </div>
+                            <!-- To change input to text with suggestions -->
+                            <div class="widget-sidebar-item-wrap rld-single-select-wrap mb-0">
+                                <div class="title d-block mb-0 pt-2 text-center filter-title">Suprafață</div>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <input class="form-control onlyNumbers" type="text" class="textfield" value="" id="minSurface" name="minSurface" placeholder="Min" autocomplete="off" onkeypress="return isNumber(event)" onpaste="return false;"/>
+                                        </div>                                
+                                        <div class="col-6">
+                                            <input class="form-control onlyNumbers" type="text" class="textfield" value="" id="maxSurface" name="maxSurface" placeholder="Max" autocomplete="off" onkeypress="return isNumber(event)" onpaste="return false;"/>
+                                        </div>
+                                    </div>   
+                                </div>
+                            </div>
+
+                        <!-- Choose filters area end -->
+
+                        <div class="btn-wrap text-center">
+                            <button type="submit" name="submit" class="btn btn-yellow" href="" >Caută  <i class="fa fa-search" ></i>
+                        </div>
+                    </form>
+            </div>
+                <!-- Filter area end -->
+
+
+                <div class="col-xl-8 col-lg-8">
+                    <div class="row mb-3">
+                        <div class="col-md-9 col-sm-8">
+                            <h6 class="filter-title mt-3 mb-lg-0"><%= propcount %> Proprietăți</h6>
+                        </div>
+                        
+                        <div class="col-md-3 col-sm-4">
+                            <div class="rld-single-select">
+                                <select class="select single-select sortSelect" name="sortOrder">
+                                  <option id="sortBy1" value="1">Preț (cresc.)</option>
+                                  <option id="sortBy2" value="2">Preț (desc.)</option>
+                                  <option id="sortBy3" value="3">Suprafață (cresc.)</option>
+                                  <option id="sortBy4" value="4">Suprafață (desc.)</option>
+                                  <option id="sortBy5" selected="selected" value="5">Data publicării </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- properties area start -->
+
+<div class="container">
+    <div class="row" id="PropertySearchResults">
+        <% for (var i = 0; i < propList.length; i++) { %>
+            <div class="single-feature style-two">
+                            <div class="thumb">
+                                <img src=<%= "/properties_images/" + propList[i].id + "/" + propList[i].id + "_resized_img_0.webp" %> alt="img">
+                                <a href="#"><i class="fa fa-heart"></i></a>
+                            </div>
+                            <div class="details">
+                                <div class="details-wrap">
+                                    <p class="author"><i class="fa fa-user"></i> <%=propList[i].agent.first_name + " " + propList[i].agent.last_name%></p>
+                                    <h6 class="title"><a href="/property/<%=propList[i].id%>"><%=propList[i].title%></a></h6>
+                                    <h6 class="price"><% if (propList[i].price_sale != null){ %>
+                                            <%= propList[i].price_sale%>
+                                            <%} else if (propList[i].price_rent != null){%>
+                                                    <%=propList[i].price_rent%>
+                                                <%}%> €</h6>
+                                    <ul class="info-list">
+                                        <div class="row ">
+                                            <div class="col-2">
+                                                <p>Camere</p>
+                                                <%=propList[i].rooms%>
+                                            </div>
+                                            <div class="col-4">
+                                                <p> Suprafață utilă</p>
+                                                <%=propList[i].surface_useable%>mp
+                                            </div>
+                                            <div class="col-2">
+                                                <p>Etaj</p>
+                                                <%=propList[i].floor%>
+                                            </div>
+                                            <div class="col-3">       
+                                                <li><a class="btn btn-yellow" href="/property/<%= propList[i].id %>">Detalii</a></li>        
+                                            </div>
+                                        </div>
+                                    </ul>    
+                                </div>
+                            </div>
+                        </div>
+        <% } %>
+        <!-- properties area end -->
+
+        <!-- pagination nav start -->
+    </div>
+        <% if (pages > 0) { %>
+            <ul class="pagination justify-content-center">
+                <% if (current >= 6 ) { %>
+                    <% pageUrl.searchParams.set("page", 1) %>
+                    <li class="page-item"><a class="page-link" href="<%=pageUrl%>">1</a></li>
+                <% } %>
+                <% var i = (Number(current) > 5 ? Number(current) - 4 : 1) %>
+                <% if (i !== 1) { %>
+                    <li class="disabled page-item"><a class="page-link">...</a></li>
+                <% } %>
+                <% for (; i <= (Number(current) + 4) && i <= pages; i++) { %>
+                    <% if (i == current) { %>
+                        <li class="active page-item"><a class="page-link"><%= i %></a></li>
+                    <% } else { %>
+                        <% pageUrl.searchParams.set("page", i) %>
+                        <li class="page-item"><a href="<%=pageUrl %> " class="page-link"><%= i %></a></li>
+                    <% } %>
+                    <% if (i == Number(current) + 4 && i < pages) { %>
+                        <li class="disabled page-item"><a class="page-link" >...</a></li>
+                    <% } %>
+                <% } %>
+                <% if (current <= pages - 5) { %>
+                    <% pageUrl.searchParams.set("page", pages) %>
+                    <li class="page-item"><a href="<%=pageUrl%>" class="page-link" ><%= pages%></a></li>
+                <% } %>
+            </ul>
+        <% } %>
+</div>
+<!-- pagination nav end -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<%- include("./partials/footer")%>

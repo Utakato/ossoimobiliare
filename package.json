@@ -1,0 +1,23 @@
+{
+  "name": "ossoimobiliare_v3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "ejs": "^3.1.6",
+    "ejs-lint": "^1.2.1",
+    "express": "^4.17.1",
+    "mongodb-ejs-pagination": "^1.0.3",
+    "mongoose": "^5.13.5",
+    "querystring": "^0.2.1",
+    "webp-converter": "^2.3.3"
+  }
+}

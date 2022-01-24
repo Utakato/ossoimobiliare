@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RealDeal - Real Estate HTML Template</title>
+
+    <!-- favicon -->
+    <link rel=icon href=assets/img/favicon.png sizes="20x20" type="image/png">
+    <!-- Vendor Stylesheet -->
+    <link rel="stylesheet" href="assets/css/vendor.css">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- responsive Stylesheet -->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+
+    <!-- preloader area start -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="spinner">
+                <div class="dot1"></div>
+                <div class="dot2"></div>
+            </div>
+        </div>
+    </div>
+    <!-- preloader area end -->
+    <div class="body-overlay" id="body-overlay"></div>
+
+    <!-- navbar start -->
+    <div class="navbar-area">
+        <nav class="navbar navbar-area navbar-expand-lg">
+            <div class="container nav-container">
+                <div class="responsive-mobile-menu">
+                    <button class="menu toggle-btn d-block d-lg-none" data-toggle="collapse" data-target="#realdeal_main_menu" 
+                    aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-left"></span>
+                        <span class="icon-right"></span>
+                    </button>
+                </div>
+                <div class="logo">
+                    <a href="index.html"><img src="assets/img/logo.png" alt="logo"></a>
+                </div>
+                <div class="nav-right-part nav-right-part-mobile">
+                    <a class="btn btn-yellow" href="add-new-property.html">ADD LISTING <span class="right"><i class="la la-plus"></i></span></a>
+                </div>
+                <div class="collapse navbar-collapse" id="realdeal_main_menu">
+                    <ul class="navbar-nav menu-open">
+                        <li class="menu-item-has-children current-menu-item">
+                            <a href="#">Home</a>
+                            <ul class="sub-menu">
+                                <li><a href="index.html">Home 01</a></li>
+                                <li><a href="home02.html">Home 02</a></li>
+                                <li><a href="home03.html">Home 03</a></li>
+                                <li><a href="home04.html">Home 04</a></li>
+                                <li><a href="home05.html">Home 05</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="#">Property</a>
+                            <ul class="sub-menu">
+                                <li><a href="property.html">Property</a></li>
+                                <li><a href="propertys-availavbe.html">Propertys Availavbe</a></li>
+                                <li><a href="propertys-by-city.html">Property By City</a></li>
+                                <li><a href="propertys-recent.html">Property Recent</a></li>
+                                <li><a href="property-details.html">Property Details</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="#">Pages</a>
+                            <ul class="sub-menu">
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="advisor.html">Advisor</a></li>
+                                <li><a href="search-map.html">Search Map</a></li>
+                                <li><a href="search-list.html">Search List</a></li>
+                                <li><a href="search-grid.html">Search Grid</a></li>
+                                <li><a href="faq.html">FAQ</a></li>
+                                <li><a href="pricing.html">Pricing</a></li>
+                                <li><a href="user-list.html">User List</a></li>
+                                <li><a href="registration.html">Registration</a></li>
+                                <li><a href="404.html">404</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item-has-children">
+                            <a href="#">News</a>
+                            <ul class="sub-menu">
+                                <li><a href="news.html">News</a></li>
+                                <li><a href="news-details.html">News Details</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="nav-right-part nav-right-part-desktop">
+                    <a class="btn btn-yellow" href="add-new-property.html">ADD LISTING <span class="right"><i class="la la-plus"></i></span></a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- navbar end -->
+
+    <!-- breadcrumb area start -->
+    <div class="breadcrumb-area jarallax" style="background-image:url(assets/img/bg/4.png);">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb-inner">
+                        <h1 class="page-title">Apartment for rent in Gulshan</h1>
+                        <ul class="page-list">
+                            <li><a href="index.html">Home</a></li>
+                            <li>Apartment rent</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- breadcrumb area End -->
+
+    <!-- search page start -->
+    <div class="search-page-wrap pd-top-100 pd-bottom-70">
+        <div class="search-container">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-3 col-lg-4 sitebar">
+                        <h6 class="filter-title mb-4"><img class="mr-3" src="assets/img/icons/18.png" alt="img">Filter</h6>
+                        <form class="widget widget-sidebar-search-wrap">
+                            <div class="widget-sidebar-search">
+                                <div class="title">Any Price</div>
+                                <div class="widget-sidebar-item-wrap btn-area">
+                                    <a class="btn btn-yellow" href="#">For Buy</a>
+                                    <a class="btn btn-yellow float-right" href="#">For Rent</a>
+                                </div>
+                                <div class="widget-sidebar-item-wrap rld-single-input left-icon">
+                                    <input type="text" placeholder="Entry Landmark Location">
+                                </div>
+                                <div class="widget-sidebar-item-wrap rld-single-select">
+                                    <select class="select single-select">
+                                      <option value="1">All Properties</option>
+                                      <option value="2">Properties 1</option>
+                                      <option value="3">Properties 2</option>
+                                      <option value="3">Properties 3</option>
+                                    </select>
+                                </div>
+                                <div class="widget-sidebar-item-wrap rld-price-slider-wrap">
+                                    <div class="title">Any Price</div>
+                                    <div class="price">
+                                        <span>$750.00</span>
+                                        <span class="float-right">$3500.00</span>
+                                    </div>
+                                    <div class="rld-price-slider">
+                                        <div class="ui-slider-handle-price ui-slider-handle"></div>
+                                    </div>
+                                </div>
+                                <div class="widget-sidebar-item-wrap rld-price-slider-wrap">
+                                    <div class="title">Size</div>
+                                    <div class="price">
+                                        <span>600</span>
+                                        <span class="float-right">6500sqf</span>
+                                    </div>
+                                    <div class="rld-size-slider">
+                                        <div class="ui-slider-handle-size ui-slider-handle"></div>
+                                    </div>
+                                </div>
+                                <div class="widget-sidebar-item-wrap rld-single-select-wrap">
+                                    <div class="title d-inline-block float-left mb-0 pt-2">Bedroom</div>
+                                    <div class="rld-single-select d-inline-block float-right">
+                                        <select class="select single-select">
+                                          <option value="1">2-4</option>
+                                          <option value="2">3-4</option>
+                                          <option value="3">1-3</option>
+                                          <option value="3">2-4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="widget-sidebar-item-wrap rld-single-select-wrap">
+                                    <div class="title d-inline-block float-left mb-0 pt-2">Bathroom</div>
+                                    <div class="rld-single-select d-inline-block float-right">
+                                        <select class="select single-select">
+                                          <option value="1">2-4</option>
+                                          <option value="2">3-4</option>
+                                          <option value="3">1-3</option>
+                                          <option value="3">2-4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="widget-sidebar-item-wrap rld-single-select-wrap mb-0">
+                                    <div class="title d-inline-block float-left mb-0 pt-2">Parking</div>
+                                    <div class="rld-single-select d-inline-block float-right">
+                                        <select class="select single-select">
+                                          <option value="1">2-4</option>
+                                          <option value="2">3-4</option>
+                                          <option value="3">1-3</option>
+                                          <option value="3">2-4</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn-wrap text-center">
+                                <button class="btn btn-yellow"><span class="left"><i class="fa fa-search"></i></span>Find Property</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-xl-8 col-lg-8">
+                        <div class="row mb-3">
+                            <div class="col-md-9 col-sm-8">
+                                <h6 class="filter-title mt-3 mb-lg-0">73 Properties</h6>
+                            </div>
+                            <div class="col-md-3 col-sm-4">
+                                <div class="rld-single-select">
+                                    <select class="select single-select">
+                                      <option value="1">Tile View</option>
+                                      <option value="2">Tile View 1</option>
+                                      <option value="3">Tile View 2</option>
+                                      <option value="3">Tile View 3</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="single-feature style-two">
+                                <div class="thumb">
+                                    <img src="assets/img/feature/l1.png" alt="img">
+                                    <a href="#"><i class="fa fa-heart"></i></a>
+                                </div>
+                                <div class="details">
+                                    <div class="details-wrap">
+                                        <a href="#" class="feature-logo">
+                                            <img src="assets/img/icons/l3.png" alt="icons">
+                                        </a>
+                                        <p class="author"><i class="fa fa-user"></i> Vilma Jarvi By Redbrox</p>
+                                        <h6 class="title"><a href="#">Jason Landville Apartment</a></h6>
+                                        <h6 class="price">$350/mo</h6><del>$790/mo</del>
+                                        <ul class="info-list">
+                                            <li><i class="fa fa-bed"></i> 05 Bed</li>
+                                            <li><i class="fa fa-bath"></i> 02 Bath</li>
+                                            <li><img src="assets/img/icons/7.png" alt="img"> 1898 sq.</li>
+                                        </ul>
+                                        <ul class="contact-list">
+                                            <li><a class="phone" href="#"><i class="fa fa-phone"></i></a></li>
+                                            <li><a class="message" href="#"><img src="assets/img/icons/8.png" alt="img"></a></li>
+                                            <li><a class="btn btn-yellow" href="#">View Details</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single-feature style-two">
+                                <div class="thumb">
+                                    <img src="assets/img/feature/l2.png" alt="img">
+                                    <a href="#"><i class="fa fa-heart"></i></a>
+                                </div>
+                                <div class="details">
+                                    <div class="details-wrap">
+                                        <a href="#" class="feature-logo">
+                                            <img src="assets/img/icons/l3.png" alt="icons">
+                                        </a>
+                                        <p class="author"><i class="fa fa-user"></i> Vilma Jarvi By Redbrox</p>
+                                        <h6 class="title"><a href="#">Jason Landville Apartment</a></h6>
+                                        <h6 class="price">$350/mo</h6><del>$790/mo</del>
+                                        <ul class="info-list">
+                                            <li><i class="fa fa-bed"></i> 05 Bed</li>
+                                            <li><i class="fa fa-bath"></i> 02 Bath</li>
+                                            <li><img src="assets/img/icons/7.png" alt="img"> 1898 sq.</li>
+                                        </ul>
+                                        <ul class="contact-list">
+                                            <li><a class="phone" href="#"><i class="fa fa-phone"></i></a></li>
+                                            <li><a class="message" href="#"><img src="assets/img/icons/8.png" alt="img"></a></li>
+                                            <li><a class="btn btn-yellow" href="#">View Details</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single-feature style-two">
+                                <div class="thumb">
+                                    <img src="assets/img/feature/l3.png" alt="img">
+                                    <a href="#"><i class="fa fa-heart"></i></a>
+                                </div>
+                                <div class="details">
+                                    <div class="details-wrap">
+                                        <a href="#" class="feature-logo">
+                                            <img src="assets/img/icons/l3.png" alt="icons">
+                                        </a>
+                                        <p class="author"><i class="fa fa-user"></i> Vilma Jarvi By Redbrox</p>
+                                        <h6 class="title"><a href="#">Jason Landville Apartment</a></h6>
+                                        <h6 class="price">$350/mo</h6><del>$790/mo</del>
+                                        <ul class="info-list">
+                                            <li><i class="fa fa-bed"></i> 05 Bed</li>
+                                            <li><i class="fa fa-bath"></i> 02 Bath</li>
+                                            <li><img src="assets/img/icons/7.png" alt="img"> 1898 sq.</li>
+                                        </ul>
+                                        <ul class="contact-list">
+                                            <li><a class="phone" href="#"><i class="fa fa-phone"></i></a></li>
+                                            <li><a class="message" href="#"><img src="assets/img/icons/8.png" alt="img"></a></li>
+                                            <li><a class="btn btn-yellow" href="#">View Details</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single-feature style-two">
+                                <div class="thumb">
+                                    <img src="assets/img/feature/l4.png" alt="img">
+                                    <a href="#"><i class="fa fa-heart"></i></a>
+                                </div>
+                                <div class="details">
+                                    <div class="details-wrap">
+                                        <a href="#" class="feature-logo">
+                                            <img src="assets/img/icons/l3.png" alt="icons">
+                                        </a>
+                                        <p class="author"><i class="fa fa-user"></i> Vilma Jarvi By Redbrox</p>
+                                        <h6 class="title"><a href="#">Jason Landville Apartment</a></h6>
+                                        <h6 class="price">$350/mo</h6><del>$790/mo</del>
+                                        <ul class="info-list">
+                                            <li><i class="fa fa-bed"></i> 05 Bed</li>
+                                            <li><i class="fa fa-bath"></i> 02 Bath</li>
+                                            <li><img src="assets/img/icons/7.png" alt="img"> 1898 sq.</li>
+                                        </ul>
+                                        <ul class="contact-list">
+                                            <li><a class="phone" href="#"><i class="fa fa-phone"></i></a></li>
+                                            <li><a class="message" href="#"><img src="assets/img/icons/8.png" alt="img"></a></li>
+                                            <li><a class="btn btn-yellow" href="#">View Details</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="single-feature style-two">
+                                <div class="thumb">
+                                    <img src="assets/img/feature/l5.png" alt="img">
+                                    <a href="#"><i class="fa fa-heart"></i></a>
+                                </div>
+                                <div class="details">
+                                    <div class="details-wrap">
+                                        <a href="#" class="feature-logo">
+                                            <img src="assets/img/icons/l3.png" alt="icons">
+                                        </a>
+                                        <p class="author"><i class="fa fa-user"></i> Vilma Jarvi By Redbrox</p>
+                                        <h6 class="title"><a href="#">Jason Landville Apartment</a></h6>
+                                        <h6 class="price">$350/mo</h6><del>$790/mo</del>
+                                        <ul class="info-list">
+                                            <li><i class="fa fa-bed"></i> 05 Bed</li>
+                                            <li><i class="fa fa-bath"></i> 02 Bath</li>
+                                            <li><img src="assets/img/icons/7.png" alt="img"> 1898 sq.</li>
+                                        </ul>
+                                        <ul class="contact-list">
+                                            <li><a class="phone" href="#"><i class="fa fa-phone"></i></a></li>
+                                            <li><a class="message" href="#"><img src="assets/img/icons/8.png" alt="img"></a></li>
+                                            <li><a class="btn btn-yellow" href="#">View Details</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- search page End -->
+            
+    <!-- footer area start -->
+    <footer class="footer-area">
+        <div class="container">
+            <div class="footer-top">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <a class="footer-logo" href="#"><img src="assets/img/footer-logo.png" alt="logo"></a>
+                    </div>
+                    <div class="col-sm-8">
+                        <div class="footer-social text-sm-right">
+                            <span>FOLLOW US</span>
+                            <ul class="social-icon">
+                                <li>
+                                    <a href="#" target="_blank"><i class="fa fa-facebook  "></i></a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"><i class="fa fa-twitter  "></i></a>
+                                </li>
+                                <li>
+                                    <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
+                                </li>
+                            </ul>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="widget widget_nav_menu">
+                            <h4 class="widget-title">Popular Searches</h4>
+                            <ul>
+                                <li><a href="index.html">Apartment for Rent</a></li>
+                                <li><a href="about.html">Apartment Low to hide</a></li>
+                                <li><a href="#">Offices for Buy</a></li>
+                                <li><a href="#">Offices for Rent</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="widget widget_nav_menu">
+                            <h4 class="widget-title">Homepress Markets</h4>
+                            <ul>
+                                <li><a href="index.html">Los Angeles Offices</a></li>
+                                <li><a href="about.html">Las Vegas Apartment</a></li>
+                                <li><a href="#">Sacramento Townhome</a></li>
+                                <li><a href="#">San Francisco Offices</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="widget widget_nav_menu">
+                            <h4 class="widget-title">Quick Links</h4>
+                            <ul>
+                                <li><a href="index.html">Pricing Plans</a></li>
+                                <li><a href="about.html">Our Services</a></li>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-6">
+                        <form class="widget widget-subscribe">
+                            <div class="rld-single-input">
+                                <input type="text" placeholder="Full Name">
+                            </div>
+                            <div class="rld-single-input">
+                                <input type="text" placeholder="Your@email.com">
+                            </div>
+                            <button class="btn btn-yellow w-100">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="copy-right text-center">
+                © Copyright Realdeal Made with <a href="http://zwin.io/" target="_blank"><i class="fa fa-heart"></i> </a> by <a href="http://zwin.io/" target="_blank"><span>Zwin</span></a>.
+            </div>
+        </div>
+    </footer>
+    <!-- footer area end -->
+
+    <!-- back to top area start -->
+    <div class="back-to-top">
+        <span class="back-top"><i class="fa fa-angle-up"></i></span>
+    </div>
+    <!-- back to top area end -->
+
+
+    <!-- all plugins here -->
+    <script src="assets/js/vendor.js"></script>
+    <!-- main js  -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
