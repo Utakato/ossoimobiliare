@@ -4,6 +4,7 @@ const mongoose = require("mongoose")
 const compression = require("compression")
 const apiRoutes = require("./router/api-routes.js")
 const routes = require("./router/routes.js")
+const path = require("path")
 
 const PORT = process.env.PORT || 3000;
 const app = express();
@@ -19,7 +20,7 @@ app.use(compression())
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(express.static( path.join(__dirname, '../client')));
+app.use(express.static(path.join(__dirname, '../client')));
 
 app.set("views", __dirname + "/views");
 app.set("view engine", "ejs");
