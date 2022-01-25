@@ -1,7 +1,7 @@
 const PropertyModel = require("../models/crm-model.js");
 const fs = require("fs")
 const imgs = require("./../DB/images_to_file.js")
-
+const path = require("path")
 /* --------------------------------------------------
 	## Global variables
 ---------------------------------------------------- */
@@ -189,7 +189,7 @@ function getTags(mongoQueryResult) {
 
 
 function getImageList(req) {
-  const defImgPath = __dirname +"./../../client/properties_images/" + req.params.property_id
+  const defImgPath = path.join(__dirname, "./../../client/properties_images/", req.params.property_id)
   const list = fs.readdirSync(defImgPath, (err, files) => {
     if (err) {console.log(err)}
     return files.map(file => {return file})
