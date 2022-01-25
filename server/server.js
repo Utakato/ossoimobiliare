@@ -8,9 +8,9 @@ const routes = require("./router/routes.js")
 const PORT = process.env.PORT || 3000;
 const app = express();
 
-DB_USER = process.env.DB_USER
-DB_PASSWORD = process.env.DB_PASSWORD
-DB_NAME = process.env.DB_NAME
+const DB_USER = process.env.DB_USER
+const DB_PASSWORD = process.env.DB_PASSWORD
+const DB_NAME = process.env.DB_NAME
 
 mongoose.connect(`mongodb+srv://${DB_USER}:${DB_PASSWORD}@ossodev.fftes.mongodb.net/${DB_NAME}?retryWrites=true&w=majority`)
 
@@ -29,8 +29,3 @@ app.use("/", routes)
 app.listen(PORT, () => {
   console.log(`Server listening on ${PORT}`);
 });
-
-
-// const CRM = require("./DB/CRM_Import.js")
-// This should be called every night
-// CRM.reset() ---> Add delete imgs to crmreset

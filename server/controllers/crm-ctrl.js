@@ -26,8 +26,6 @@ const land_type = {
 }
 
 
-
-
 // Handle index actions
 exports.index = function (req, res) {
   if (req.query) {

@@ -5,7 +5,7 @@ const controller = require("../controllers/crm-ctrl.js")
 router.get("/", function(req, res){
     res.json({
         status: "APi Working",
-        message: "Welcome to rest"
+        message: "Welcome to api"
     })
 });
 
