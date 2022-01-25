@@ -6,7 +6,7 @@ const imgs = require("./../DB/images_to_file.js")
 	## Global variables
 ---------------------------------------------------- */
 
-const baseURL = "http://localhost:3000"
+const baseURL = "https://ossoimobiliare.herokuapp.com/"
 
 
 /* --------------------------------------------------
