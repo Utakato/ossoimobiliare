@@ -189,7 +189,7 @@ function getTags(mongoQueryResult) {
 
 
 function getImageList(req) {
-  const defImgPath = "./../client/properties_images/" + req.params.property_id
+  const defImgPath = __dirname +"./../client/properties_images/" + req.params.property_id
   const list = fs.readdirSync(defImgPath, (err, files) => {
     if (err) {console.log(err)}
     return files.map(file => {return file})
